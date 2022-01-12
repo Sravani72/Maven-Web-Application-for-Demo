@@ -26,7 +26,7 @@ pipeline {
   stage('Building our image') {
     steps{
      script {
-        bat 'docker run hello-world'
+        bat 'sudo docker run hello-world'
      }
    }
   }
