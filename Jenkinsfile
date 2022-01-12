@@ -26,7 +26,8 @@ pipeline {
   stage('Building our image') {
     steps{
      script {
-        bat 'sudo docker run hello-world'
+        bat 'apt-get update'
+        bat 'apt-get install docker-ce docker-ce-cli containerd.io'
      }
    }
   }
