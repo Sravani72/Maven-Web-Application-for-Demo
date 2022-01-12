@@ -10,17 +10,17 @@ pipeline {
   stages {
      stage("Cleaning Stage") {
       steps {
-        sh "mvn clean"
+        bat "mvn clean"
       }
     }
     stage("Testing stage") {
       steps {
-        sh "mvn test"
+        bat "mvn test"
       }
     }
     stage("Packaging stage") {
       steps {
-        sh "mvn package"
+        bat "mvn package"
       }
     }
   stage('Building our image') {
