@@ -1,10 +1,10 @@
 pipeline {
   
-  environment {
-    registry = "vishwavk2021/docker"
-    registryCredential = 'Bri!!iouser2021'
-    dockerImage = ''
-  }
+//   environment {
+//     registry = "vishwavk2021/docker"
+//     registryCredential = 'Bri!!iouser2021'
+//     dockerImage = ''
+//   }
   
   agent any
   stages {
@@ -23,14 +23,19 @@ pipeline {
         bat "mvn package"
       }
     }
-  stage('Building our image') {
-    steps{
-     script {
-        bat 'apt-get update'
-        bat 'apt-get install docker-ce docker-ce-cli containerd.io'
-     }
-   }
-  }
+    stage("Sonar stage") {
+      steps {
+        bat "mvn package sonar:sonar"
+      }
+    }
+//   stage('Building our image') {
+//     steps{
+//      script {
+//         bat 'apt-get update'
+//         bat 'apt-get install docker-ce docker-ce-cli containerd.io'
+//      }
+//    }
+//   }
 //     stage('image pull') {
 //     steps{
 //      script {
