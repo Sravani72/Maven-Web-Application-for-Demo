@@ -28,14 +28,6 @@ pipeline {
         bat "mvn package sonar:sonar"
       }
     }
-//   stage('Building our image') {
-//     steps{
-//      script {
-//         bat 'apt-get update'
-//         bat 'apt-get install docker-ce docker-ce-cli containerd.io'
-//      }
-//    }
-//   }
-    
+   
  }
 }
