@@ -5,7 +5,7 @@ pipeline {
 //     registryCredential = 'Bri!!iouser2021'
 //     dockerImage = ''
 //   }
-  
+// changes made for webhook
   agent any
   stages {
      stage("Cleaning Stage") {
